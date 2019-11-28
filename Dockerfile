@@ -1,4 +1,4 @@
-FROM php:7.2-alpine
+FROM php:7.3-alpine
 
 RUN apk update && \
     apk --no-cache add bash libmcrypt-dev libxml2-dev libzip-dev mysql-client postgresql-dev freetype-dev libjpeg-turbo-dev libpng-dev icu-dev alpine-sdk autoconf nodejs nodejs-npm yarn && \
