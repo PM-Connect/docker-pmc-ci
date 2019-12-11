@@ -7,7 +7,7 @@ COPY --from=composer:1.9 /usr/bin/composer /usr/bin/composer
 ENV PHPREDIS_VERSION=$PHPREDIS_VERSION
 
 RUN apk update && \
-    apk --no-cache add bash libmcrypt-dev libxml2-dev libzip-dev mysql-client postgresql-dev freetype-dev libjpeg-turbo-dev libpng-dev icu-dev alpine-sdk autoconf nodejs nodejs-npm yarn python2 python && \
+    apk --no-cache add bash libmcrypt-dev libxml2-dev libzip-dev mysql-client postgresql-dev freetype-dev libjpeg-turbo-dev libpng-dev icu-dev alpine-sdk autoconf nodejs nodejs-npm yarn python2 python docker && \
 	apk -Uuv add make gcc groff less \
 		musl-dev libffi-dev openssl-dev \
 		python2-dev py-pip && \
