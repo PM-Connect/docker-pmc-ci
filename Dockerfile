@@ -10,7 +10,7 @@ RUN apk update && \
     apk --no-cache add bash libmcrypt-dev libxml2-dev libzip-dev mysql-client postgresql-dev freetype-dev libjpeg-turbo-dev libpng-dev icu-dev alpine-sdk autoconf nodejs nodejs-npm yarn python2 python docker && \
 	apk -Uuv add make gcc groff less \
 		musl-dev libffi-dev openssl-dev \
-		python2-dev py-pip && \
+		python2-dev py-pip openrc && \
 	pip install awscli docker-compose && \
 	rm /var/cache/apk/*    rm -rf /usr/local/etc/php-fpm.d/* && \
 	rc-update add docker boot && \
