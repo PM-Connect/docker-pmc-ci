@@ -13,6 +13,7 @@ RUN apk update && \
 		python2-dev py-pip && \
 	pip install awscli docker-compose && \
 	rm /var/cache/apk/*    rm -rf /usr/local/etc/php-fpm.d/* && \
+	rc-update add docker boot && \
     rm -rf /etc/nginx/conf.d && \
     curl -L -o /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/$PHPREDIS_VERSION.tar.gz && \
     tar -xzf /tmp/redis.tar.gz -C /tmp && \
